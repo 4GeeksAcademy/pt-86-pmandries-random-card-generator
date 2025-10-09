@@ -1,5 +1,38 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: white;
+    background: green;
+    padding-top: 200px;
+}
+
+.card {
+    height: 350px;
+    width: 250px;
+    margin: auto;
+    border: 2px;
+    border-radius: 15px;
+    box-shadow: 7px 7px #000e0036;
+    padding-top: 5px;
+}
+
+.suit, .rank {
+    font-size: 75px;
+    justify-content: center;
+}
+
+.top {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    transform: scale(1, -1);
+}
+
+.button {
+    margin-top: 20px;
 }
