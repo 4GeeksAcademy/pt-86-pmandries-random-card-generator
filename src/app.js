@@ -7,12 +7,13 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  document.querySelector(".btn").addEventListener("click", newDeal);
+  let playedCards = [];
+  document.querySelector(".btn").addEventListener("click", deal);
 };
 
-  const newDeal = () => {
-    let suits = ["♠", "♥", "♦", "♣"];
-    let ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+  const deal = () => {
+    const suits = ["♠", "♥", "♦", "♣"];
+    const ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
     let suitIndex = Math.floor(Math.random() * suits.length);
     let rankIndex = Math.floor(Math.random() * ranks.length);
@@ -22,7 +23,7 @@ window.onload = function() {
     } else if (suitIndex == 0 || suitIndex == 3) {
       document.getElementById("card").style.color = "black";
     }
-      
+
     document.getElementById("top").innerHTML = suits[suitIndex];
     document.getElementById("rank").innerHTML = ranks[rankIndex];
     document.getElementById("bottom").innerHTML = suits[suitIndex];
